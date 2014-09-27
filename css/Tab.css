@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.show {
+	display: block !important;
+}
+#div1 {
+	width: 300px;
+	height: 220px;
+	margin: 50px auto 0 auto;
+	overflow: hidden;
+}
+#ul1, #ul2 {
+	width: 300px;
+} 
+#ul1 li, #ul2 li {
+	float: left;
+	display: inline;
+} 
+#ul1 {
+	height: 20px;
+}
+#ul1 li {
+	padding:0 5px;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+}
+#ul1 li.now {
+	background-color: #f03;
+	color: #fff;
+}
+
+#ul2 {
+	height: 200px;
+	overflow: hidden;
+}
+#ul2 li {
+	display: none;
+	width: 198px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 198px;
+}

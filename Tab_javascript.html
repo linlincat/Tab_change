@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab-jquery</title>
+	<link rel="stylesheet" type="text/css" href="css/Tab.css">
+	<script type="text/javascript">
+		window.onload = function() {
+			var ul1 = document.getElementById('ul1');
+			var ul1Lis = ul1.getElementsByTagName('li');
+
+			var ul2 = document.getElementById('ul2');
+			var ul2Lis = ul2.getElementsByTagName('li');
+
+			var i;
+			var j;
+
+			for (i = 0; i < ul1Lis.length; i++) {
+				ul1Lis[i].index = i;
+				ul1Lis[i].onmouseover = function() {
+
+					for (j = 0; j < ul1Lis.length; j++) {
+						ul1Lis[j].className = '';
+						ul2Lis[j].className = '';
+					}
+
+					this.className = 'now';
+					ul2Lis[this.index].className = 'show';
+				};
+			}
+		};
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<ul id="ul1">
+			<li class="now">第一页</li>
+			<li>第二页</li>
+			<li>第三页</li>
+		</ul>
+		<ul id="ul2">
+			<li class="show">展示第一页的内容</li>
+			<li>展示第二页的内容</li>
+			<li>展示第三页的内容</li>
+		</ul>
+	</div>
+</body>
+</html>
